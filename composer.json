@@ -1,0 +1,24 @@
+{
+    "name": "koine/repository",
+    "description": "Abstraction classes for repositories",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marcelo Jacobus",
+            "email": "marcelo.jacobus@gmail.com"
+        }
+    ],
+    "require": {
+        "zendframework/zendframework": ">=2.4.0",
+        "php" : ">=5.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "satooshi/php-coveralls": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Koine\\Repository\\": "src/"
+        }
+    }
+}
