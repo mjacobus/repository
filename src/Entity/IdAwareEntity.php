@@ -5,9 +5,6 @@ namespace Koine\Repository\Entity;
 use Koine\Repository\Entity\GeneratedIdInterface;
 use Koine\Repository\Entity\IdAwareInterface;
 
-/**
- * Koine\Repository\Entity\IdAwareEntity
- */
 abstract class IdAwareEntity implements GeneratedIdInterface, IdAwareInterface
 {
     /**

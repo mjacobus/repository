@@ -4,9 +4,6 @@ namespace KoineTest\Repository\Test;
 
 use Koine\Repository\Test\DbTestCase;
 
-/**
- * KoineTest\Repository\Test\DbTestCaseTest
- */
 class DbTestCaseTest extends DbTestCase
 {
     /**

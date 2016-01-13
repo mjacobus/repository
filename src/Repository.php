@@ -2,9 +2,6 @@
 
 namespace Koine\Repository;
 
-/**
- * Koine\Repository\Repository
- */
 class Repository extends RepositoryAbstract
 {
     public function persist($entity)

@@ -4,9 +4,6 @@ namespace Dummy;
 
 use Koine\Repository\Entity\IdAwareEntity;
 
-/**
- * Dummy\TestTableEntity
- */
 class TestTableEntity extends IdAwareEntity
 {
     private $name;

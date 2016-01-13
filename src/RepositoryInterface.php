@@ -2,9 +2,6 @@
 
 namespace Koine\Repository;
 
-/**
- * Koine\Repository\RepositoryInterface
- */
 interface RepositoryInterface
 {
     /**

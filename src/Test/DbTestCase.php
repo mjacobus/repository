@@ -6,9 +6,6 @@ use PHPUnit_Framework_TestCase;
 use Koine\Repository\Storage\MySql;
 use PDO;
 
-/**
- * Koine\Repository\Test\DbTestCase
- */
 class DbTestCase extends PHPUnit_Framework_TestCase
 {
     /**

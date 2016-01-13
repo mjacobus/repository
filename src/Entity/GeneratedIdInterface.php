@@ -2,9 +2,6 @@
 
 namespace Koine\Repository\Entity;
 
-/**
- * Koine\Repository\Entity\GeneratedIdInterface
- */
 interface GeneratedIdInterface
 {
     /**

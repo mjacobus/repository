@@ -4,9 +4,6 @@ namespace Koine\Repository;
 
 use Koine\Repository\Entity\GeneratedIdInterface;
 
-/**
- * Koine\Repository\IdAwareRepository
- */
 class IdAwareRepository extends Repository
 {
     /**

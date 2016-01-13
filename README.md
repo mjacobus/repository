@@ -11,8 +11,8 @@ Repository classes
 
 ```php
 <?php
-$persistence = new \Koine\Repository\Storage\MySql($pdo, 'users');
-$repository = new \Koine\Repository\Repository($persistence);
+$storage = new \Koine\Repository\Storage\MySql($pdo, 'users');
+$repository = new \Koine\Repository\Repository($storage);
 $respository->setHydrator($hydrator)
   ->setEntityPrototype(new User());
 
