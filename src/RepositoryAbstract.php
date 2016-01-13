@@ -3,7 +3,7 @@
 namespace Koine\Repository;
 
 use Koine\Repository\Exception\RecordNotFoundException;
-use Koine\Repository\Persistence\PersistenceInterface;
+use Koine\Repository\Storage\StorageInterface;
 use Zend\Stdlib\Hydrator\HydratorInterface;
 
 /**
@@ -22,14 +22,14 @@ abstract class RepositoryAbstract implements RepositoryInterface
     private $entityPrototype;
 
     /**
-     * @var PersistenceInterface
+     * @var StorageInterface
      */
     private $persistence;
 
     /**
-     * @param PersistenceInterface $persistence
+     * @param StorageInterface $persistence
      */
-    public function __construct(PersistenceInterface $persistence)
+    public function __construct(StorageInterface $persistence)
     {
         $this->persistence = $persistence;
     }
@@ -37,7 +37,7 @@ abstract class RepositoryAbstract implements RepositoryInterface
     /**
      * @return MySql
      */
-    protected function getPersistence()
+    protected function getStorage()
     {
         return $this->persistence;
     }
@@ -51,7 +51,7 @@ abstract class RepositoryAbstract implements RepositoryInterface
      */
     public function findOneBy(array $params)
     {
-        $rawData = $this->getPersistence()->findOneBy($params);
+        $rawData = $this->getStorage()->findOneBy($params);
 
         return $this->createEntity($rawData);
     }
@@ -79,7 +79,7 @@ abstract class RepositoryAbstract implements RepositoryInterface
      */
     public function findAllBy(array $params = array())
     {
-        $rawCollection = $this->getPersistence()->findAllBy($params);
+        $rawCollection = $this->getStorage()->findAllBy($params);
         $collection = array();
 
         foreach ($rawCollection as $rawData) {

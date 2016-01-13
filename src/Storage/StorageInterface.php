@@ -1,14 +1,14 @@
 <?php
 
-namespace Koine\Repository\Persistence;
+namespace Koine\Repository\Storage;
 
 use Koine\Repository\Exception\DomainException;
 use Koine\Repository\Exception\RecordNotFoundException;
 
 /**
- * Koine\Repository\Persistence\PersistenceInterface
+ * Koine\Repository\Storage\StorageInterface
  */
-interface PersistenceInterface
+interface StorageInterface
 {
     /**
      * @param array $conditions

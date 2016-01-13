@@ -57,7 +57,7 @@ class IdAwareRepository extends Repository
     protected function insert(GeneratedIdInterface $entity)
     {
         $data = $this->getHydrator()->extract($entity);
-        $generatedId = $this->getPersistence()->insert($data);
+        $generatedId = $this->getStorage()->insert($data);
 
         if ($generatedId) {
             $entity->setGeneratedId($generatedId);
@@ -79,7 +79,7 @@ class IdAwareRepository extends Repository
             $this->getIdField() => $entity->getId(),
         );
 
-        return $this->getPersistence()->updateWhere($conditions, $data);
+        return $this->getStorage()->updateWhere($conditions, $data);
     }
 
     /**
@@ -93,7 +93,7 @@ class IdAwareRepository extends Repository
             $this->getIdField() => $entity->getId(),
         );
 
-        $result = $this->getPersistence()->deleteWhere($conditions);
+        $result = $this->getStorage()->deleteWhere($conditions);
         $entity->setGeneratedId(null);
 
         return $result;

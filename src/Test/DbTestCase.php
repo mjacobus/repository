@@ -3,7 +3,7 @@
 namespace Koine\Repository\Test;
 
 use PHPUnit_Framework_TestCase;
-use Koine\Repository\Persistence\MySql;
+use Koine\Repository\Storage\MySql;
 use PDO;
 
 /**

@@ -1,15 +1,15 @@
 <?php
 
-namespace Koine\Repository\Persistence\Pdo;
+namespace Koine\Repository\Storage\Pdo;
 
 use Koine\Repository\Exception\RecordNotFoundException;
-use Koine\Repository\Persistence\PersistenceInterface;
+use Koine\Repository\Storage\StorageInterface;
 use PDO;
 
 /**
- * Koine\Repository\Persistence\Pdo\AbstractPersistence
+ * Koine\Repository\Storage\Pdo\AbstractStorage
  */
-class AbstractPersistence implements PersistenceInterface
+class AbstractStorage implements StorageInterface
 {
     /**
      * @var PDO

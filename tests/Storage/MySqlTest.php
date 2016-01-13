@@ -2,7 +2,7 @@
 
 namespace KoineTest\Repository;
 
-use Koine\Repository\Persistence\MySql;
+use Koine\Repository\Storage\MySql;
 use Koine\Repository\Test\DbTestCase;
 
 class MySqlTest extends DbTestCase

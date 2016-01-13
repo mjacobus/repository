@@ -21,7 +21,7 @@ class IdAwareRepositoryTest extends DbTestCase
     public function setUp()
     {
         parent::setUp();
-        $this->persitence = $this->getMock('Koine\Repository\Persistence\PersistenceInterface');
+        $this->persitence = $this->getMock('Koine\Repository\Storage\StorageInterface');
         $this->repository = new IdAwareRepository($this->persitence);
         $this->hydrator = new ClassMethods();
         $this->entityPrototype = new TestTableEntity();
